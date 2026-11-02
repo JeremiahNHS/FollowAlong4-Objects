@@ -15,19 +15,27 @@ package part15;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    in THIS file AND in Car.java, saying in YOUR OWN WORDS what that line does.
-
+// defines the name of the class
 public class ObjectOriented {
+    // the main method alerts java this is the start of the program
     public static void main(String[] args){
+        // creates a new car and stores it in myCar1
         Car myCar1 = new Car();
+        // creates a new car and stores it in myCar2
         Car myCar2 = new Car();
-
+        // prints out the make of car 1
         System.out.println(myCar1.make);
+        // prints out the model of car 1
         System.out.println(myCar1.model);
+        // prints an empty new line
         System.out.println();
+        // prints out the make of car 2
         System.out.println(myCar2.make);
+        // prints out the model of car 2
         System.out.println(myCar2.model);
-
+        // calls the drive method for car 1
         myCar1.drive();
+        // calls the brake method for car 1
         myCar1.brake();
 
     }
