@@ -13,14 +13,19 @@ package part18;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Garage.java and Car.java too.
-
+// defines the name of the class
 public class ObjectPassing {
+    // the main method is where the program starts running
     public static void main(String[] args){
+        // creates a new garage object named garage
         Garage garage = new Garage();
+        // creates a new Car object called car1 with the name "BMW"
         Car car1 = new Car("BMW");
+        // creates a new Car object called car2 with the name "Tesla"
         Car car2 = new Car("Tesla");
-
+        // passes car1 to the park method of the garage object
         garage.park(car1);
+        // passes car2 to the park method of the garage object
         garage.park(car2);
     }
 }
