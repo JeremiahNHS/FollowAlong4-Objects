@@ -45,4 +45,8 @@ public class Pizza {
     public Pizza(){
         // empty constructor that creates a Pizza object without assigning any attributes
     }
+
+    public String toString(){
+        return bread + " crust pizza with " + sauce + ", " + cheese + " and " + topping;
+    }
 }

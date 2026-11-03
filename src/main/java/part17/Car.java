@@ -9,6 +9,16 @@ public class Car {
     String color = "red";
     // initializes the attribute year of type int with the value of 2021, which can be used throughout the class
     int year = 2021;
+
+    public Car(){
+
+    }
+    public Car(String make, String model, String color, int year){
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.year = year;
+    }
     // overrides the toString method to return a String describing this car
     public String toString(){
         // returns all the car's attributes as a String with each one on a new line
