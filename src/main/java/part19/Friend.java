@@ -6,9 +6,11 @@ public class Friend {
     // declares a static attribute called numberOfFriends of type int that is shared by all Friend objects
     static int numberOfFriends;
     // constructor for the Friend class which takes one parameter; String name
+    static String newestFriend;
+
     Friend(String name){
         // assigns the name passed into the constructor to this Friend's name attribute
-        this.name = name;
+        this.newestFriend = name;
         // increments the numberOfFriends by one each time a new Friend object is created
         numberOfFriends++;
     }
