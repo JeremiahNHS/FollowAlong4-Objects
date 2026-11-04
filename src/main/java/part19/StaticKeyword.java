@@ -13,21 +13,25 @@ package part19;
 //
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Friend.java too.
-
+// defines the name of the class
 public class StaticKeyword {
+    // the main method is where the program starts running
     public static void main(String[] args){
+        // grabs the numberOfFriends from the Friend class then prints it, doesn't need an object because its static
         System.out.println(Friend.numberOfFriends);
-
+        // a new Friend object called friend1 named SpongeBob
         Friend friend1 = new Friend("SpongeBob");
+        // a new Friend object called friend2 named Patrick
         Friend friend2 = new Friend("Patrick");
+        // a new Friend object called friend3 named Squidward
         Friend friend3 = new Friend("Squidward");
-
+        // calls the displayFriends method directly from the class because its static
         Friend.displayFriends();
-
+        // a new Friend object called friend4 named Sandy
         Friend friend4 = new Friend("Sandy");
-
+        // calls the displayFriends method directly from the class because its static
         Friend.displayFriends();
-
+        // calls the round method from the Math class without having to create an object, and prints it out
         System.out.println(Math.round(3.14));
     }
 
