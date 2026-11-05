@@ -12,13 +12,26 @@ public class Challenge {
     //   roundedTotal(16, 17, 18)  → 60    (20 + 20 + 20)
     //   roundedTotal(12, 13, 14)  → 30    (10 + 10 + 10)
     public static int roundedTotal(int a, int b, int c) {
-        return 0;   // YOUR CODE — use round10
+        int[] nums = {a,b,c};
+        int sum = 0;
+        for (int num : nums){
+            if (num % 10 >= 5){
+                sum += (num - num % 10) + 10;
+            } else {
+                sum += ((num - num % 10));
+            }
+        }
+        return sum;
     }
 
     // The helper. Rounds n to the nearest 10. A last digit of 5 or more rounds UP.
     //   round10(15) → 20     round10(14) → 10     round10(20) → 20
     public static int round10(int n) {
-        return 0;   // YOUR CODE
+        if (n % 10 >= 5){
+            return (n - (n % 10)) + 10;
+        } else {
+            return n - (n % 10);
+        }
     }
 
     // Small bricks are 1 inch long. Big bricks are 5 inches long.
@@ -28,6 +41,8 @@ public class Challenge {
     //   canBuildWall(3, 2, 10) → true    (two big)
     // No loop needed — and with huge numbers a loop is too slow anyway.
     public static boolean canBuildWall(int small, int big, int goal) {
-        return false;   // YOUR CODE
+        int bigUsed = Math.min(big,(goal / 5));
+        int remainder = goal - (bigUsed * 5);
+        return remainder <= small;
     }
 }
