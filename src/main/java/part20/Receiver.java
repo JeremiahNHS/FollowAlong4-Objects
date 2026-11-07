@@ -59,10 +59,24 @@ public class Receiver {
     }
     // overrides the toString method to return a String describing this receiver
     public String toString(){
-        // returns the receiver's number, name, catches, and yards as a String
-        return "#" + number + " " + name + ": "
-                + catches + " catches, "
-                + yards + " yards";
+        if (catches == 1 ) {
+            // returns the receiver's number, name, catches, and yards as a String
+            return "#" + number + " " + name + ": "
+                    + catches + " catch, "
+                    + yards + " yards";
+        } else {
+            return "#" + number + " " + name + ": "
+                    + catches + " catches, "
+                    + yards + " yards";
+        }
+    }
+
+    public double yardsPerCatch(){
+        if (catches == 0){
+            return 0.0;
+        } else {
+            return (double) yards / catches;
+        }
     }
 
 }
